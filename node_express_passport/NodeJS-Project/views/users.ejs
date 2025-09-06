@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= company_name %></title>
+    <link rel='stylesheet' href='/users/users.css' />
+  </head>
+  <body>
+    <h1><%= company_name %></h1>
+    <p>Welcome to api path <%= users_api_path %> showing <%= users_ejs %></p>
+    <a href="/">
+      <button type="button">Back to Index</button>
+    </a>
+    <% if (raw) { %>
+      <h2>User Profile</h2>
+      <pre><%= raw %></pre>
+    <% } else { %>
+      <p>No user is authenticated.</p>
+    <% } %>
+
+  </body>
+</html>
