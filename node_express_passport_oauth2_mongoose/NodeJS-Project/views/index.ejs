@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= company_name %>
+  </title>
+  <link rel='stylesheet' href='/index/index.css' />
+</head>
+
+<body>
+  <h1>
+    <%= company_name %>
+  </h1>
+  <p>Welcome to api path <%= index_api_path %> showing <%= index_ejs %>
+  </p>
+  <form action="/auth/login" method="post" style="margin-bottom:20px;">
+    <h2>Login</h2>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit"
+      style="padding:10px 20px; font-size:16px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">Login</button>
+  </form>
+  <form action="/auth/create" method="post" style="margin-bottom:20px;">
+    <h2>Register</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit"
+      style="padding:10px 20px; font-size:16px; background:#2196F3; color:white; border:none; border-radius:4px; cursor:pointer;">Register</button>
+  </form>
+  <form action="/auth/delete" method="post" style="margin-bottom:20px;">
+    <h2>Delete User</h2>
+    <label for="delete-email">Email:</label>
+    <input type="email" id="delete-email" name="email" required><br>
+    <button type="submit"
+      style="padding:10px 20px; font-size:16px; background:#f44336; color:white; border:none; border-radius:4px; cursor:pointer;">Delete
+      User</button>
+  </form>
+  <form action="/auth/google" method="get">
+    <button type="submit"
+      style="padding:10px 20px; font-size:16px; background:#4285F4; color:white; border:none; border-radius:4px; cursor:pointer;">
+      Sign in with Google
+    </button>
+  </form>
+</body>
+
+</html>
