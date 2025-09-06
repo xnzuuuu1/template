@@ -5,7 +5,7 @@ import User from '../models/User.js';
 const router = express.Router();
 
 // User registration route
-router.post('/create', async (req, res) => {
+router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
   try {
     // Check if user already exists

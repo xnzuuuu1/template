@@ -37,13 +37,10 @@ async (accessToken, refreshToken, profile, done) => {
 })
 );
 
-
-
 passport.serializeUser((user, done) => {
   // Store only user._id in session
   done(null, user._id);
 });
-
 
 passport.deserializeUser(async (id, done) => {
   // Fetch user from DB by _id for each request
